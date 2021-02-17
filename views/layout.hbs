@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Wiki</title>
+    <link rel="stylesheet" href="/stylesheets/site.css">
+  </head>
+  <body>
+      <div>
+        {{>sidebar}}
+          <div id="container">
+            {{#if user}}
+            {{>headerAuth}}
+            {{else}}
+            {{>headerGuest}}
+            {{/if}}
+            {{{body}}}
+            {{>footer}}
+          </div>
+      </div>
+  </body>
+</html>
